@@ -1,44 +1,52 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import axios from 'axios';
-import {Input} from "../../components";
+import {View, Image} from 'react-native';
+import sharedStyles from "../../utils/sharedStyles";
+import {Button, Input} from "../../components";
+import AuthStore from '../../config/store/auth';
+import Wrapper from "../../components/wrapper";
+import vars from "../../config/vars";
+import {Strings} from "../../translate";
 
 class Login extends Component {
-    static navigationOptions = {
-        title: 'Login'
-    };
     state = {
         email: '',
         password: '',
+        loading: false
     };
 
-    async login() {
-        const {email, password} = this.state;
-        try {
-            const res = await axios.post('http://localhost:3100/api/auth/login', {email, password});
-            this.props.navigation.navigate('Home', {data: res.data});
-        } catch (e) {
-            alert(e);
-        }
+    login() {
+        this.setState({loading: true});
+        AuthStore.login(this.state, () => {
+            alert(Strings('incorrectEmailOrPassword'));
+            this.setState({loading: false});
+        });
     }
 
     render() {
         return (
-            <View style={{flex: 1, padding: 15, justifyContent: 'center'}}>
-                <Input
-                    placeholder={'Email'}
-                    value={this.state.email}
-                    onChangeText={email => this.setState({email})}
-                />
-                <Input
-                    placeholder={'password'}
-                    value={this.state.password}
-                    onChangeText={password => this.setState({password})}
-                    secureTextEntry={true}
-                />
-                <Text style={{fontSize: 20, textAlign: 'center', marginTop: 30}} onPress={() => this.login()}>LOGIN</Text>
-                <Text style={{fontSize: 18, textAlign: 'center', marginTop: 10}} onPress={() => this.props.navigation.navigate('Register')}>Register</Text>
-            </View>
+            <Wrapper style={sharedStyles.wrapper}>
+                <Image source={require('../../assets/images/logo.png')} style={{width: 120, height: 80, resizeMode: 'contain'}} id={'logo'} />
+                <View style={{width: '90%'}}>
+                    <Input
+                        value={this.state.email}
+                        onChange={email => this.setState({email})}
+                        label={'Email'}
+                        type={'email-address'}
+                    />
+                    <Input
+                        value={this.state.password}
+                        onChange={password => this.setState({password})}
+                        label={Strings('password')}
+                        password
+                    />
+                    <Button
+                        title={Strings('login')}
+                        onPress={() => this.login()}
+                        style={{backgroundColor: vars.secondColor}}
+                        loading={this.state.loading}
+                    />
+                </View>
+            </Wrapper>
         )
     }
 }

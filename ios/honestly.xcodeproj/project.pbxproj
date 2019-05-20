@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -40,6 +39,12 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		F4709BF3E51C41118416BCDB /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 985C9DF0771743C5B5EBB514 /* libRNI18n.a */; };
+		B8A05E263080466EA64A467F /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EA41074B314CCC849E799B /* libRNI18n-tvOS.a */; };
+		D853EB6EA0714F3CBCE80BD8 /* Monolog-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A92C572378A48CEA2929B87 /* Monolog-Medium.otf */; };
+		7B0C12DC2F1646A19A3B9939 /* Monolog-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9464CF5220BA47EFA3954E4F /* Monolog-Regular.otf */; };
+		73C663E2D3C141E5A2F29CED /* Monolog-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C23D69E28755410F9B5049A2 /* Monolog-SemiBold.otf */; };
+		B89AAD501D6441B1A309033F /* monolog.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCCCB5C74D114D629FF2DF8E /* monolog.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,6 +352,13 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		AA912C4D57134A2F882A2695 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		985C9DF0771743C5B5EBB514 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		94EA41074B314CCC849E799B /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		2A92C572378A48CEA2929B87 /* Monolog-Medium.otf */ = {isa = PBXFileReference; name = "Monolog-Medium.otf"; path = "../src/assets/fonts/Monolog-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9464CF5220BA47EFA3954E4F /* Monolog-Regular.otf */ = {isa = PBXFileReference; name = "Monolog-Regular.otf"; path = "../src/assets/fonts/Monolog-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C23D69E28755410F9B5049A2 /* Monolog-SemiBold.otf */ = {isa = PBXFileReference; name = "Monolog-SemiBold.otf"; path = "../src/assets/fonts/Monolog-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BCCCB5C74D114D629FF2DF8E /* monolog.otf */ = {isa = PBXFileReference; name = "monolog.otf"; path = "../src/assets/fonts/monolog.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +387,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				F4709BF3E51C41118416BCDB /* libRNI18n.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +404,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				B8A05E263080466EA64A467F /* libRNI18n-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +578,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				AA912C4D57134A2F882A2695 /* RNI18n.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -585,6 +600,7 @@
 				00E356EF1AD99517003FC87E /* honestlyTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				6B0E3CD075834ABEB1E6CEDF /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -610,6 +626,18 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		6B0E3CD075834ABEB1E6CEDF /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				2A92C572378A48CEA2929B87 /* Monolog-Medium.otf */,
+				9464CF5220BA47EFA3954E4F /* Monolog-Regular.otf */,
+				C23D69E28755410F9B5049A2 /* Monolog-SemiBold.otf */,
+				BCCCB5C74D114D629FF2DF8E /* monolog.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -692,7 +720,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -1057,6 +1085,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				D853EB6EA0714F3CBCE80BD8 /* Monolog-Medium.otf in Resources */,
+				7B0C12DC2F1646A19A3B9939 /* Monolog-Regular.otf in Resources */,
+				73C663E2D3C141E5A2F29CED /* Monolog-SemiBold.otf in Resources */,
+				B89AAD501D6441B1A309033F /* monolog.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1221,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/honestly.app/honestly";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1207,6 +1248,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/honestly.app/honestly";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Release;
 		};
@@ -1226,6 +1276,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = honestly;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1244,6 +1298,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = honestly;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Release;
 		};
@@ -1270,6 +1328,15 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1296,6 +1363,15 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Release;
 		};
@@ -1321,6 +1397,15 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/honestly-tvOS.app/honestly-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Debug;
 		};
@@ -1346,6 +1431,15 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/honestly-tvOS.app/honestly-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+				);
 			};
 			name = Release;
 		};

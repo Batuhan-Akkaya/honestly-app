@@ -1,3 +1,12 @@
+export {default as Splash} from './splash';
+export {default as Home} from './home';
 export {default as Login} from './login';
 export {default as Register} from './register';
-export {default as Home} from './home';
+export {default as Games} from './games';
+export {default as FriendList} from './frinedList';
+export {default as Notifications} from './notifications';
+export {default as GameRoom} from './gameRoom';
+export {default as Tutorial} from './tutorial';
+export {default as LeaderBoard} from './leaderboard';
+export {default as AnswerPopup} from './gameRoom/popup';
+export {default as Profile} from './profile';

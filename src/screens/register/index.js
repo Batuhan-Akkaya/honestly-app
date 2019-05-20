@@ -1,51 +1,66 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import {Input} from "../../components";
-import axios from 'axios';
+import {View, Image} from 'react-native';
+import sharedStyles from "../../utils/sharedStyles";
+import {Button, Input, Wrapper} from "../../components";
+import AuthStore from '../../config/store/auth';
+import vars from "../../config/vars";
+import {Strings} from "../../translate";
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 class Register extends Component {
-    static navigationOptions = {
-        title: 'Register'
-    };
-
     state = {
         email: '',
         password: '',
         name: ''
     };
 
-    async register() {
-        const {email, password, name} = this.state;
-        try {
-            const res = await axios.post('http://localhost:3100/api/auth/register', {email, password, name});
-            alert(res);
-        } catch (e) {
-            alert(e);
-        }
+    register() {
+        this.setState({loading: true});
+        if (validateEmail(this.state.email)) {
+            AuthStore.register(this.state, err => {
+                if (err.response.data.msg.code == 11000)
+                    alert('Bu email adresi zaten kayıtlı!');
+                alert(Strings('error'));
+                this.setState({loading: false});
+            });
+        } else alert(Strings('enterValidEmail'));
     }
 
     render() {
         return (
-            <View style={{flex: 1, padding: 15, justifyContent: 'center'}}>
-                <Input
-                    placeholder={'Email'}
-                    value={this.state.email}
-                    onChangeText={email => this.setState({email})}
-                />
-                <Input
-                    placeholder={'Name'}
-                    value={this.state.name}
-                    onChangeText={name => this.setState({name})}
-                />
-                <Input
-                    placeholder={'password'}
-                    value={this.state.password}
-                    onChangeText={password => this.setState({password})}
-                    secureTextEntry={true}
-                />
-                <Text style={{fontSize: 20, textAlign: 'center', marginTop: 30}} onPress={() => this.register()}>Register</Text>
-                <Text style={{fontSize: 18, textAlign: 'center', marginTop: 10}} onPress={() => this.props.navigation.goBack()}>Login</Text>
-            </View>
+            <Wrapper style={sharedStyles.wrapper}>
+                <Image source={require('../../assets/images/logo.png')} style={{width: 120, height: 80, resizeMode: 'contain'}} id={'logo'} />
+                <View style={{width: '90%'}}>
+                    <Input
+                        value={this.state.name}
+                        onChange={name => this.setState({name})}
+                        label={Strings('firstNameLastName')}
+                        capitalize={'words'}
+                        maxLenght={25}
+                    />
+                    <Input
+                        value={this.state.email}
+                        onChange={email => this.setState({email})}
+                        label={'Email'}
+                        type={'email-address'}
+                        maxLenght={60}
+                    />
+                    <Input
+                        value={this.state.password}
+                        onChange={password => this.setState({password})}
+                        label={Strings('password')}
+                        password
+                    />
+                    <Button
+                        title={Strings('register')}
+                        onPress={() => this.register()}
+                        style={{backgroundColor: vars.thirdColor}}
+                    />
+                </View>
+            </Wrapper>
         )
     }
 }
